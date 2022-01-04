@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Order</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./style/style.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="./style/lib.css" media="all" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    </head>
+    </head>
+    <body>
+        <header>
+            <div class="header-logo">EShoes</div>
+            <div class="header-item">
+                <ul>
+                    <li class="header-item-link">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="header-item-link">
+                        <a href="product.html">Products</a>
+                    </li>
+                    <li class="header-item-link">
+                        <a href="about.html">About us</a>
+                    </li>
+                    <li class="header-item-link">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <ul class="header-ul">
+                    <li class="header-item-link" id="login-user"></li>
+                    <li class="header-item-link cart">
+                        <i class="ri-shopping-cart-fill icon-cart"></i>
+                        <div class="cart-popup">
+                            <div class="cart-noItem" style="display: none"> No products in the cart </div>
+                            <div class="cart-wrapper"></div>
+                            <div class="cart-total"></div>
+                            <div class="cart-button">
+                                <a href="cart.html" class="cart-button-link">View Cart</a>
+                                <a href="checkout.html" class="cart-button-link">Check Out</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="title-cart">
+            <span>Your Order</span>
+        </div>
+
+        <table class="table-viewcart" style="width: 70%; margin: 20px auto;">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Subtotal</th>
+                    <th>Address</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody class="order-product" style="font-weight: 500;"></tbody>
+        </table>
+
+        <script src="https://kit.fontawesome.com/6b31c79fde.js" crossorigin="anonymous"></script>  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="./script/lib.js"></script>
+        <script src="./script/main.js"></script>
+        <script src="./script/cart.js"></script>
+        <script src="./script/orders.js"></script>
+        <script>
+            const user = JSON.parse(localStorage.getItem('loggedin'));
+            const login = document.querySelector('#login-user');
+
+            login.innerHTML = (user) ? `<span id="username">${user.name}</span><div class="dropdown-user"><span onclick="logout()"><i class="ri-logout-box-line"></i>Logout</span><a href="order.html">Order</a></div>` : '<a href="login.html">Login</a>';
+        </script>
+    </body>
+</html>
