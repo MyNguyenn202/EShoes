@@ -1,7 +1,7 @@
 # EShoes
 
 ## Demo
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
+[![Watch the video](https://res.cloudinary.com/mynguyen/video/upload/v1641364095/2022-01-05_13-17-02_nyvzrm.mov)
 
 ## Mô tả
 
