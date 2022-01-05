@@ -1,8 +1,7 @@
 # EShoes
 
 ## Demo
-![grab-landing-page](https://i.imgur.com/YCXPxlJ.gif)
-<iframe class="imgur-embed" width="100%" height="720" frameborder="0" src="https://i.imgur.com/YCXPxlJ.gifv#embed"></iframe>
+![](https://i.imgur.com/YCXPxlJ.gif)
 
 ## Mô tả
 
