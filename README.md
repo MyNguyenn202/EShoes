@@ -1,7 +1,7 @@
 # EShoes
 
 ## Demo
-<img id="imgur" src="https://i.imgur.com/YCXPxlJ.gifv">
+<img id="imgur" src="https://i.imgur.com/YCXPxlJ.gif">
 
 ## Mô tả
 
