@@ -1,11 +1,11 @@
 # EShoes
 
 ## Demo
-<img id="imgur" src="//i.imgur.com/YCXPxlJh.jpg">
+<img id="imgur" src="https://i.imgur.com/YCXPxlJh.jpg">
 $('#imgur').gifplayer({
 	mode: 'video',
-  webm: '//i.imgur.com/YCXPxlJ.webm',
-  mp4: '//i.imgur.com/YCXPxlJ.mp4'
+  webm: 'https://i.imgur.com/YCXPxlJ.webm',
+  mp4: 'https://i.imgur.com/YCXPxlJ.mp4'
 });
 
 ## Mô tả
