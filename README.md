@@ -2,7 +2,7 @@
 
 ## Mô tả
 
-Website bán hàng với các chức năng của người dùng như đăng nhập, đăng kí, đặt hàng...
+Website bán sản phẩm giày dép với các chức năng của người dùng như đăng nhập, đăng kí, giỏ hàng, đặt hàng... Sử dụng ngôn ngữ html, css và javascript.
 
 ## Hướng dẫn sử dụng
 - Download source code được nén thành file zip. 
