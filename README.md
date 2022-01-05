@@ -1,11 +1,7 @@
 # EShoes
 
 ## Demo
-$('#imgur').gifplayer({
-	mode: 'video',
-  webm: '//i.imgur.com/YCXPxlJ.webm',
-  mp4: '//i.imgur.com/YCXPxlJ.mp4'
-});
+![Alt Text](https://i.imgur.com/YCXPxlJ.gif)
 
 ## Mô tả
 
