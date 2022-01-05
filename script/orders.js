@@ -73,18 +73,20 @@ function displayOrder() {
     const orders = JSON.parse(localStorage.getItem('orders'));
     let html = '';
     
-    orders.forEach(order => {
-        if(order.customerId == loggedin.id) {
-            let s = '';
-            order.products.forEach(product => s += `${product.name} x ${product.count} | `);
-            html += `<tr>
-                <td>${s}</td>
-                <td>${order.subtotal.toLocaleString('vi', {style: 'currency', currency: 'VND'})}</td>
-                <td>${order.address}</td>
-                <td>${!order.status ? 'In Process' : 'Completed'}</td>
-            </tr>`
-        }
-    })
+    if(orders) {
+        orders.forEach(order => {
+            if(order.customerId == loggedin.id) {
+                let s = '';
+                order.products.forEach(product => s += `${product.name} x ${product.count} | `);
+                html += `<tr>
+                    <td>${s}</td>
+                    <td>${order.subtotal.toLocaleString('vi', {style: 'currency', currency: 'VND'})}</td>
+                    <td>${order.address}</td>
+                    <td>${!order.status ? 'In Process' : 'Completed'}</td>
+                </tr>`
+            }
+        })
+    }
 
     if(html === '') html += `<tr>
         <td colspan="10 " style="text-align: center;">You have no order yet</td>
