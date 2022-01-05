@@ -1,12 +1,12 @@
 # EShoes
 
 ## Demo
-<img id="imgur" src="https://imgur.com/YCXPxlJ">
+<img id="imgur" src="https://imgur.com/YCXPxlJh.jpg">
 <script>
 $('#imgur').gifplayer({
   mode: 'video',
-  webm: '//i.imgur.com/fNxKlX1.webm',
-  mp4: '//i.imgur.com/fNxKlX1.mp4'
+  webm: '//i.imgur.com/YCXPxlJ.webm',
+  mp4: '//i.imgur.com/YCXPxlJ.mp4'
 });
 </script>
 
