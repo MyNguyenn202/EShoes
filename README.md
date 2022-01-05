@@ -1,7 +1,14 @@
 # EShoes
 
 ## Demo
-[Imgur](https://i.imgur.com/YCXPxlJ.gifv)
+<img id="imgur" src="https://imgur.com/YCXPxlJ">
+<script>
+$('#imgur').gifplayer({
+  mode: 'video',
+  webm: '//i.imgur.com/fNxKlX1.webm',
+  mp4: '//i.imgur.com/fNxKlX1.mp4'
+});
+</script>
 
 ## Mô tả
 
