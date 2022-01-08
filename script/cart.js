@@ -110,6 +110,7 @@ function displayViewCart() {
     const loggedin = JSON.parse(localStorage.getItem('loggedin'));
     const customers = JSON.parse(localStorage.getItem('user'));
     const viewcartTable = document.querySelector('.viewcart-product');
+    const btnCheckout = document.querySelector('.button-checkout');
     
     if(!loggedin) {
         viewcartTable.innerHTML = `<tr>
@@ -162,8 +163,10 @@ function displayViewCart() {
             });
         } else {
             html += `<tr>
-                <td colspan="10 " style="text-align: center;">You have no product in cart</td>
+                <td colspan="10" style="text-align: center;">You have no product in cart, please select product <a href="product.html">here</a></td>
             </tr>`
+            btnCheckout.style.pointerEvents = 'none';
+            btnCheckout.style.opacity = 0.6;
         }
         viewcartTable.innerHTML = html;
     }
@@ -236,15 +239,19 @@ function removeFromViewCart() {
             yesBtn[index].onclick = function() {
                 const id = this.getAttribute('data-id');
                 const customers = JSON.parse(localStorage.getItem('user'));
-                const index = customers.findIndex(customer => customer.id == loggedin.id);
-                
-                customers[index].cart = customers[index].cart.filter(cart => cart.id != id);
+                const customer = customers.find(customer => customer.id == loggedin.id);
+
+                customer.cart = customer.cart.filter(cart => cart.id != id);
 
                 localStorage.setItem('user', JSON.stringify(customers));
-                displayViewCart();
+                window.location.reload();
             }
         }
     })
+}
+
+function togglePopupDelete() {
+    document.querySelector('.popup-delete-post').classList.toggle('show');
 }
 
 displayCart();
