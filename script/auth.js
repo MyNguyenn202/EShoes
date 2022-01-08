@@ -16,6 +16,12 @@ const register = (e) => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const confirmPass = document.getElementById('confirmpassword').value;
+    let regex = /\S+@\S+\.\S+/;
+
+    if(!regex.test(email)) {
+        addAlert('Email is not valid');
+        return;
+    }
 
     if(password !== confirmPass) {
         addAlert('Password is not matching');
@@ -64,8 +70,15 @@ const login = (e) => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
+    let regex = /\S+@\S+\.\S+/;
+
     if (!email || !password) {
-        addAlert('Wrong email or password');
+        addAlert('One field is required');
+        return;
+    }
+
+    if(!regex.test(email)) {
+        addAlert('Email is not valid');
         return;
     }
 
