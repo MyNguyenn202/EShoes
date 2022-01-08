@@ -184,15 +184,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="./script/lib.js"></script>
-        <script src="./script/cart.js"></script>
         <script src="./script/main.js"></script>
-        <script src="./script/product.js"></script>
+        <script src="./script/cart.js"></script>
         <script>
             const user = JSON.parse(localStorage.getItem('loggedin'));
             const login = document.querySelector('#login-user');
 
             login.innerHTML = (user) ? `<span id="username">${user.name}</span><div class="dropdown-user"><span onclick="logout()"><i class="ri-logout-box-line"></i>Logout</span><a href="order.html">Order</a></div>` : '<a href="login.html">Login</a>';
         </script>
-        
     </body>
 </html>
