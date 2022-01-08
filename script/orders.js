@@ -34,7 +34,7 @@ function order(e) {
         addAlert('One field is required');
         return;
     }
-    if(!phone.length === 10 || isNaN(phone)) {
+    if(!(phone.length === 10) || isNaN(phone)) {
         addAlert('Phone number is not valid');
         return;
     }
